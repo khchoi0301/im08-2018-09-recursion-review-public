@@ -133,6 +133,7 @@ if ( typeof module === "object" && typeof module.exports === "object" ) {
   module.exports = {
     stringifiableObjects,
     unstringifiableValues,
+    parseableStrings,
     unparseableStrings
   }
 }

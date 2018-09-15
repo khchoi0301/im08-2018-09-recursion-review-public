@@ -4,7 +4,7 @@ if(typeof window === 'undefined') {
   const { JSDOM } = jsdom;
   const dom = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
   global.document = dom.window.document;
-  var $ = require('jquery');
+  var $ = require('jquery')(dom.window);
   var expect = require('../lib/chai/chai').expect;
   var _ = require('../lib/underscore');
 }
