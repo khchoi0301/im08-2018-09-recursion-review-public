@@ -1,3 +1,14 @@
+if(typeof window === 'undefined') {
+  var getElementsByClassName = require('../src/getElementsByClassName');
+  const jsdom = require("jsdom");
+  const { JSDOM } = jsdom;
+  const dom = new JSDOM(`<!DOCTYPE html><html><body></body></html>`);
+  global.document = dom.window.document;
+  var $ = require('jquery');
+  var expect = require('../lib/chai/chai').expect;
+  var _ = require('../lib/underscore');
+}
+
 var htmlStrings = [
   '<div class="targetClassName"></div>',
   '<div class="otherClassName targetClassName"></div>',

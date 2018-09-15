@@ -1,3 +1,9 @@
+if(typeof window === 'undefined') {
+  var parseJSON = require('../src/parseJSON');
+  var expect = require('../lib/chai/chai').expect;
+  var _ = require('../lib/underscore');
+}
+
 // test cases are described in fixtures.js
 describe('parseJSON', function() {
 
@@ -17,8 +23,8 @@ describe('parseJSON', function() {
       var fn = function() {
         parseJSON(test);
       };
-      // if you'd prefer, you can write your version of parseJSON 
-      // so that it passes this test instead of the one on line 21. 
+      // if you'd prefer, you can write your version of parseJSON
+      // so that it passes this test instead of the one on line 21.
       // expect(parseJSON(test)).to.equal(undefined);
       expect(fn).to.throw(SyntaxError);
     });

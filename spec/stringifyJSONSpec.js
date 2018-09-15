@@ -1,3 +1,9 @@
+if(typeof window === 'undefined') {
+  var stringifyJSON = require('../src/stringifyJSON');
+  var expect = require('../lib/chai/chai').expect;
+  var {stringifiableObjects, unstringifiableValues} = require('./fixtures');
+}
+
 // test cases are described in fixtures.js
 describe('stringifyJSON', function() {
   it('should match the result of calling JSON.stringify', function() {

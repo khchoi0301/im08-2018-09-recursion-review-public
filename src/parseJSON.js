@@ -5,3 +5,7 @@
 var parseJSON = function(json) {
   // your code goes here
 };
+
+if ( typeof module === "object" && typeof module.exports === "object" ) {
+  module.exports = parseJSON;
+}

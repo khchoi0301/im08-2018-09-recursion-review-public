@@ -8,3 +8,7 @@ var getElementsByClassName = function(className
 ) {
   // your code here
 };
+
+if ( typeof module === "object" && typeof module.exports === "object" ) {
+  module.exports = getElementsByClassName;
+}

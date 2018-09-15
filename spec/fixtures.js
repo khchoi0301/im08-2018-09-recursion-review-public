@@ -127,3 +127,12 @@ unparseableStrings = [
   '["foo", "bar"',
   '["foo", "bar\\"]'
 ];
+
+
+if ( typeof module === "object" && typeof module.exports === "object" ) {
+  module.exports = {
+    stringifiableObjects,
+    unstringifiableValues,
+    unparseableStrings
+  }
+}
