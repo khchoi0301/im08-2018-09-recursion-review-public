@@ -52,8 +52,9 @@ var parseJSON = function(json) {
     var splitted =[]
 		var parsedObj = {};
   	var newJSON = json.slice(1, json.length - 1);
-    var temp = newJSON.match(/[\{\[].+[\},\]]/g);    
-    var matchedJSON = newJSON.replace(/[\{\[].+[\},\]]/g, 'matched');
+    var temp = newJSON.match(/\{.+\}|\[.+\]/g);    
+    //var matchedJSON = newJSON.replace(/[\{\[].+[\},\]]/g, 'matched');
+    var matchedJSON = newJSON.replace(/\{.+\}|\[.+\]/g, 'matched');
     console.log(555,newJSON,matchedJSON)
 
     if(matchedJSON.includes(',')){
